@@ -20,4 +20,7 @@ public class Comment {
     @ManyToOne
     private User user;
 
+    @ManyToOne
+    private Product product;
+
 }

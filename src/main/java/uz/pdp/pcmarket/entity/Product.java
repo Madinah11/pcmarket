@@ -31,13 +31,7 @@ public class Product {
     @ManyToOne
     private Sale sale;
 
-    @ManyToOne
-    private Comment comment;
-
     @OneToOne
     private Attachment photo;
-
-
-
 
 }

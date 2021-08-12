@@ -7,17 +7,21 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Data
-@Entity(name = "users")
+@Entity(name = "orders")
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Order{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String fullName;
+    private String phoneNumber;
+
+    private String email;
+
+    @ManyToOne
+    private User user;
 
     @OneToOne
-    private Address address;
-
+    private Basket basket;
 }
